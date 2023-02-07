@@ -1,0 +1,114 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,300;0,400;1,200&display=swap');
+
+body{
+    background-image: url("website\ front\ bg.jpg");
+    font-family: 'Nunito', sans-serif;
+    height: 100vh;
+    background-size: cover;
+    background position: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    overflow: hidden;
+    margin: 0;
+}
+.welcome {
+    color: white;
+    text-align: center;
+}
+/*button {
+    position: relative;
+    top: 10%;
+    width: 7%;
+    height: 55px;
+    border: 1px solid #278127;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: black;
+    transition-duration: 0.4s;
+    cursor: pointer;
+    border-radius: 4px;
+    text-decoration: none;
+    font-size: 2rem;
+    font-family: inherit;
+    display: block;
+}*/
+button:hover{
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+    transition: all 5.s;
+    background-color:#fbe775;
+    color: #244243;
+}
+.fade-in {
+    animation: fadeInAnimation ease 3s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+} 
+@keyframes fadeInAnimation {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+     }
+}
+a:link, a:visited{
+    text-decoration: none;
+    text-align: center;
+    font-family: 'Nunito', sans-serif;
+    color: white;
+}
+a:hover, a:active{
+    text-decoration: none;
+    text-align: center;
+    font-family: 'Nunito', sans-serif;
+    color: #244243;
+}
+.start {
+    background-color: #244243;
+    border-radius: 4px;
+    margin-top: 250px;
+    margin-left: 500px;
+    margin-right: 500px;
+    padding-top: 55px;
+    padding-bottom: 48px;
+    box-shadow: 0 0 10 2px rgba(100, 100, 100, 0.1);
+}
+label {
+    color:#fbe775;
+    font-size: 30px;
+    font-weight: bold; 
+}
+input {
+    text-align: center;
+    font-size: 30px;
+    font-family: 'Nunito', sans-serif;
+    color: #fbe775;
+    padding: 15px;
+    margin-top: 7px;
+    height: 68px;
+    width: 300px;
+    background-color: #41787b;
+    border-width: 5px;
+    border-style: solid;
+    border-radius: 4px;
+    border-color: #fbe775;
+}
+button {
+    text-align: center;
+    font-size: 30px;
+    font-weight: bold;
+    font-family: 'Nunito', sans-serif;
+    color: #244243;
+    padding: 5px;
+    margin-top: 20px;
+    height: 68px;
+    width: 240px;
+    background-color: #41787b;
+    border-width: 5px;
+    border-style: solid;
+    border-radius: 4px;
+    border-color: #fbe775;
+    transition-duration: 0.4s;
+    cursor: pointer;
+}
