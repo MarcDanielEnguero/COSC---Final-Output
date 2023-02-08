@@ -4,6 +4,33 @@
     <title>Logic Quiz</title>
     <script>
       
+      var count= 600;
+
+var counter=setInterval(timer, 1000); //1000 will  run it every 1 second
+
+function timer()
+{
+  count=count-1;
+  if (count <= 0)
+  {
+     clearInterval(counter);
+     document.getElementById("timer").style.visibility = "hidden"
+     document.getElementById("answer").style.visibility = "hidden"
+     document.getElementById("bt").style.visibility = "hidden"
+     document.getElementById("warning").style.visibility = "hidden"
+     document.getElementById("question").style.color = "red"
+     document.getElementById("question").innerHTML ="GAME OVER!"
+     return;
+  }
+  var minutes = Math.floor(count / 60);
+  var seconds = count % 60;
+
+  if (count <= 100)
+  {
+    document.getElementById("timer").style.color = "red";
+  }
+  document.getElementById("timer").innerHTML = minutes + " min " + seconds + " sec"; // watch for spelling
+}
 
       <!--Questions-->
       var questions = [
@@ -157,6 +184,7 @@
         if(currentQuestion < questions.length) {
       document.getElementById("warning").innerHTML = questions[currentQuestion].s;
       document.getElementById("question").innerHTML = questions[currentQuestion].q;
+      document.getElementById("rdbtt").style.visibility = "hidden";
       document.getElementById("answer").value = "";
         } else {
       document.getElementById("bt").style.visibility = "hidden";
@@ -164,6 +192,7 @@
       document.getElementById("result").style.visibility = "hidden";
       document.getElementById("warning").style.visibility = "hidden";
       document.getElementById("answer").style.visibility = "hidden";
+      document.getElementById("rdbtt").style.visibility = "visible";
   }
         if (currentQuestion == 5){
           if (document.getElementById("answer").value == questions2[currentQuestion].a) {
@@ -175,12 +204,6 @@ document.getElementById("result").innerHTML = "Correct! +1 Score!";
 document.getElementById("result").innerHTML = "Incorrect. The correct answer is: "+ questions2[currentQuestion].a;
   }
         }
-}
-for(var i=0; i<questions.length; i++) {
-    if (i==5) {
-        document.getElementById("question") = "Reached 5th Question"
-    }
-}
 
 document.getElementById("question").innerHTML = questions2[currentQuestion].q;
     </script>
@@ -192,6 +215,7 @@ document.getElementById("question").innerHTML = questions2[currentQuestion].q;
         <br>
         <div class="quiz-container">
           <h2 id="warning">Quiz 1</h2>
+          <h2 id="timer">10 min 0 sec</h2>
     <h1 id="question"> 1. M -> N <br> 2. M -> O / M -> (N ^ O) </h1>
     <br>
     <input id="answer" class="input" placeholder="Enter your answer here...">
