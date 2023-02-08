@@ -168,17 +168,19 @@ function timer()
 
 
     ];
+      var mistake = 0;
       var score = 0;
       var currentQuestion = 0;
       function changeHeader() {
         if (document.getElementById("answer").value == questions[currentQuestion].a) {
 
-    document.getElementById("result").innerHTML = "Correct!";
+    document.getElementById("result").innerHTML = "Correct! +1 Score!";
     score += 1;
 
       } else {
 
     document.getElementById("result").innerHTML = "Incorrect. The correct answer is: "+ questions[currentQuestion].a;
+    mistake += 1;
       }
 
     currentQuestion++;
@@ -196,21 +198,11 @@ function timer()
       document.getElementById("warning").style.visibility = "hidden";
       document.getElementById("answer").style.visibility = "hidden";
       document.getElementById("rdbt").style.visibility = "visible";
+      document.getElementById("timer").style.visibility = "hidden";
   }
-        if (currentQuestion == 5){
-          if (document.getElementById("answer").value == questions2[currentQuestion].a) {
-
-document.getElementById("result").innerHTML = "Correct! +1 Score!";
-
-  } else {
-
-document.getElementById("result").innerHTML = "Incorrect. The correct answer is: "+ questions2[currentQuestion].a;
-  }
-        }
-
+      }
 document.getElementById("question").innerHTML = questions2[currentQuestion].q;
 
-      }
     </script>
   </head>
   <body>
