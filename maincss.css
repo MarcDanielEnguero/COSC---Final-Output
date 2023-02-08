@@ -1,12 +1,15 @@
 @import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,300;0,400;1,200&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@700&display=swap');
 
-<div style="overflow: scroll; height: 200px;">
-  <!-- Add your content here -->
-</div>
+/*<div style="overflow: scroll; height: 200px;">
+</div>*/
+
+div {
+    overflow: scroll; height: 100vh;
+  }
 
 body{
-    background-image: url("websitebg.jpg");
+    background-image: url("website\ bg.jpg");
     height: 100vh;
     background-size: cover;
     background position: center;
@@ -14,7 +17,6 @@ body{
     background-repeat: no-repeat;
     font-family: 'Quicksand', sans-serif;
     font-size: 15px;
-    height: 100vh;
     overflow: hidden;
     margin: 0;
     align-items: center;
@@ -114,6 +116,10 @@ input:hover {
   }
   .quiz-container{
     background-image: url("quiz-container.jpg");
+    background-size: cover;
+    background position: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
     border-radius: 20px;
     box-shadow: 0 0 10 2px rgba(100, 100, 100, 0.1);
     width: 800px;
@@ -125,7 +131,4 @@ input:hover {
 }
 #warning{
     font-size: 200%;
-}
-#end{
-    color: red
 }
