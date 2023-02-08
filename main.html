@@ -15,11 +15,13 @@ function timer()
   {
      clearInterval(counter);
      document.getElementById("timer").style.visibility = "hidden"
+     document.getElementById("result").style.visibility = "hidden"
      document.getElementById("answer").style.visibility = "hidden"
      document.getElementById("bt").style.visibility = "hidden"
      document.getElementById("warning").style.visibility = "hidden"
      document.getElementById("question").style.color = "red"
-     document.getElementById("question").innerHTML ="GAME OVER!"
+     document.getElementById("question").innerHTML ="GAME OVER! Your score is: " + score + " out of 35";
+     document.getElementById("rdbt").style.visibility = "visible";
      return;
   }
   var minutes = Math.floor(count / 60);
@@ -40,7 +42,7 @@ function timer()
         {s: "Quiz 1", q: "1. M -> N <br> 2. M -> O / M -> (N ^ O) <br> 3. ~M v N 1 Impl <br> 4. ~M v O 2 Impl <br> 5. (~M v N) ^ (~M v O) 3,4 Conj", a:"~M v (N ^ O) 5 Dist"},
         {s: "Quiz 1", q: "1. M -> N <br> 2. M -> O / M -> (N ^ O) <br> 3. ~M v N 1 Impl <br> 4. ~M v O 2 Impl <br> 5. (~M v N) ^ (~M v O) 3,4 Conj <br> 6. ~M v (N ^ O) 5 Dist", a:"M -> (N ^ O) 6 Impl"},
         
-        {s: "Quiz 2", q: "1.~A      / A -> B", a:"~A v B 2 Add"},
+        {s: "Quiz 2", q: "1.~A      / A -> B", a:"~A v B 1 Add"},
         {s: "Quiz 2", q: "1.~A      / A -> B <br> 2. ~A v B      2 Add", a:"A -> B 2 Impl"},
 
         {s: "Quiz 3", q: "1. ~M -> Q <br> 2. R -> ~T <br> 3. ~M v R / Q v ~T", a:"(~M -> Q) ^ (R -> ~T) 1,2 Conj"},
